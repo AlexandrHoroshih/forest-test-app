@@ -4,5 +4,13 @@
   "main": "index.js",
   "repository": "git@github.com:AlexandrHoroshih/forest-test-app.git",
   "author": "AlexandrHoroshih <xad71rus@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-typescript": "^7.13.0",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2"
+  }
 }
