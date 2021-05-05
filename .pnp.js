@@ -52,7 +52,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-preset-razzle", "npm:4.0.4"],
             ["concurrently", "npm:5.3.0"],
             ["cross-env", "npm:7.0.3"],
+            ["effector", "npm:21.8.11"],
             ["express", "npm:4.17.1"],
+            ["forest", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.19.6"],
             ["html-webpack-plugin", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:4.5.2"],
             ["mini-css-extract-plugin", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.9.0"],
             ["razzle", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:4.0.4"],
@@ -7179,6 +7181,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["effector", [
+        ["npm:21.8.11", {
+          "packageLocation": "./.yarn/cache/effector-npm-21.8.11-5d4c2eada7-c45effed27.zip/node_modules/effector/",
+          "packageDependencies": [
+            ["effector", "npm:21.8.11"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["electron-to-chromium", [
         ["npm:1.3.727", {
           "packageLocation": "./.yarn/cache/electron-to-chromium-npm-1.3.727-c1cfff7453-a090f19d38.zip/node_modules/electron-to-chromium/",
@@ -7999,6 +8010,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["forest", [
+        ["npm:0.19.6", {
+          "packageLocation": "./.yarn/cache/forest-npm-0.19.6-a06ceb4530-15a89860b9.zip/node_modules/forest/",
+          "packageDependencies": [
+            ["forest", "npm:0.19.6"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.19.6", {
+          "packageLocation": "./.yarn/$$virtual/forest-virtual-4b812ddea9/0/cache/forest-npm-0.19.6-a06ceb4530-15a89860b9.zip/node_modules/forest/",
+          "packageDependencies": [
+            ["forest", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.19.6"],
+            ["@types/effector", null],
+            ["effector", "npm:21.8.11"]
+          ],
+          "packagePeers": [
+            "@types/effector",
+            "effector"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["forest-test-app", [
         ["workspace:.", {
           "packageLocation": "./",
@@ -8019,7 +8052,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-preset-razzle", "npm:4.0.4"],
             ["concurrently", "npm:5.3.0"],
             ["cross-env", "npm:7.0.3"],
+            ["effector", "npm:21.8.11"],
             ["express", "npm:4.17.1"],
+            ["forest", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.19.6"],
             ["html-webpack-plugin", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:4.5.2"],
             ["mini-css-extract-plugin", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.9.0"],
             ["razzle", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:4.0.4"],
