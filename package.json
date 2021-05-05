@@ -1,0 +1,8 @@
+{
+  "name": "forest-test-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:AlexandrHoroshih/forest-test-app.git",
+  "author": "AlexandrHoroshih <xad71rus@gmail.com>",
+  "license": "MIT"
+}
