@@ -1,4 +1,7 @@
 import express from "express";
+import { renderStatic } from "forest/server";
+
+import { App } from "./app";
 
 let assets: any;
 
@@ -27,10 +30,13 @@ const jsScriptTagsFromAssets = (assets, entrypoint, extra = "") => {
     : "";
 };
 
-export const renderApp = (req: express.Request, res: express.Response) => {
+export const renderApp = async (
+  req: express.Request,
+  res: express.Response
+) => {
   const context: any = {};
 
-  const markup = "<div>Something will be there...</div>";
+  const markup = await renderStatic({ fn: App });
 
   if (context.url) {
     return { redirect: context.url };
@@ -47,7 +53,7 @@ export const renderApp = (req: express.Request, res: express.Response) => {
         ${cssLinksFromAssets(assets, 'client')}
     </head>
     <body>
-        <div id="root">${markup}</div>
+        ${markup}
         ${jsScriptTagsFromAssets(assets, 'client', ' defer crossorigin')}
     </body>
   </html>`;
@@ -59,8 +65,8 @@ export const renderApp = (req: express.Request, res: express.Response) => {
 const server = express()
   .disable("x-powered-by")
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
-  .get("/*", (req: express.Request, res: express.Response) => {
-    const { html = "", redirect = false } = renderApp(req, res);
+  .get("/*", async (req: express.Request, res: express.Response) => {
+    const { html = "", redirect = false } = await renderApp(req, res);
     if (redirect) {
       res.redirect(redirect);
     } else {
