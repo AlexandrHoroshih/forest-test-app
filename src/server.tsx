@@ -1,6 +1,8 @@
 import express from "express";
+import { fork, serialize } from "effector";
 import { renderStatic } from "forest/server";
 
+import { root } from "shared/root";
 import { App } from "./app";
 
 let assets: any;
@@ -36,7 +38,8 @@ export const renderApp = async (
 ) => {
   const context: any = {};
 
-  const markup = await renderStatic({ fn: App });
+  const scope = fork(root);
+  const markup = await renderStatic({ scope, fn: App });
 
   if (context.url) {
     return { redirect: context.url };
@@ -48,13 +51,16 @@ export const renderApp = async (
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charSet='utf-8' />
-        <title>Welcome to Razzle</title>
+        <title>Forest app</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         ${cssLinksFromAssets(assets, 'client')}
     </head>
     <body>
         ${markup}
         ${jsScriptTagsFromAssets(assets, 'client', ' defer crossorigin')}
+        <script>
+          window.SCOPE_DATA = ${JSON.stringify(serialize(scope))}
+        </script>
     </body>
   </html>`;
 
