@@ -1,0 +1,4 @@
+{
+    "presets": ["razzle/babel"],
+    "plugins": ["effector/babel-plugin"]
+}
