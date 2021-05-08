@@ -1,7 +1,9 @@
 import express from "express";
-import { fork, serialize } from "effector";
+import { createMemoryHistory } from "history";
+import { fork, serialize, launch } from "effector";
 import { renderStatic } from "forest/server";
 
+import { attachHistory } from "pages/history-bind";
 import { root } from "shared/root";
 import { App } from "./app";
 
@@ -38,7 +40,14 @@ export const renderApp = async (
 ) => {
   const context: any = {};
 
+  // for test we will hardcode initial entry
+  const history = createMemoryHistory({ initialEntries: ["/about"] });
   const scope = fork(root);
+  launch(attachHistory, {
+    //@ts-expect-error
+    params: history,
+    forkPage: scope,
+  });
   const markup = await renderStatic({ scope, fn: App });
 
   if (context.url) {

@@ -55,6 +55,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["effector", "npm:21.8.11"],
             ["express", "npm:4.17.1"],
             ["forest", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.19.6"],
+            ["history", "npm:5.0.0"],
             ["html-webpack-plugin", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:4.5.2"],
             ["mini-css-extract-plugin", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.9.0"],
             ["razzle", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:4.0.4"],
@@ -8052,6 +8053,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["effector", "npm:21.8.11"],
             ["express", "npm:4.17.1"],
             ["forest", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.19.6"],
+            ["history", "npm:5.0.0"],
             ["html-webpack-plugin", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:4.5.2"],
             ["mini-css-extract-plugin", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.9.0"],
             ["razzle", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:4.0.4"],
@@ -8655,6 +8657,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/hex-color-regex-npm-1.1.0-35ec780c11-89899f5f74.zip/node_modules/hex-color-regex/",
           "packageDependencies": [
             ["hex-color-regex", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["history", [
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/history-npm-5.0.0-7080f2503f-38a8af6f31.zip/node_modules/history/",
+          "packageDependencies": [
+            ["history", "npm:5.0.0"],
+            ["@babel/runtime", "npm:7.14.0"]
           ],
           "linkType": "HARD",
         }]

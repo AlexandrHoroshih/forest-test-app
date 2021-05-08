@@ -15,7 +15,8 @@
   "dependencies": {
     "effector": "latest",
     "express": "^4.17.1",
-    "forest": "latest"
+    "forest": "latest",
+    "history": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
