@@ -4830,6 +4830,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"detect-node@npm:2.0.4":
+  version: 2.0.4
+  resolution: "detect-node@npm:2.0.4"
+  checksum: e7648a5a91dd5e91838d14f0e9631f2adf0117cc271ea86d8ce394a8fbe8fc7545755c8261faaf4b1e196795a10da99e5d5f1013163ba0f6260a57b0ba29cc60
+  languageName: node
+  linkType: hard
+
 "detect-node@npm:^2.0.4":
   version: 2.0.5
   resolution: "detect-node@npm:2.0.5"
@@ -5051,6 +5058,34 @@ __metadata:
   version: 1.1.1
   resolution: "ee-first@npm:1.1.1"
   checksum: ba74f91398e3ee3b6d665b2f0d13ad6530e89a7e64ec886a6eec0602fb8a5a274652960e21bd5d4b42fdeb9017d873ff872f50342d38779e955285977edb337c
+  languageName: node
+  linkType: hard
+
+"effector-inspector@npm:^0.4.1":
+  version: 0.4.2
+  resolution: "effector-inspector@npm:0.4.2"
+  dependencies:
+    foliage: ^0.106.0
+    forest: ^0.19.6
+  peerDependencies:
+    effector: ^20.11.5 || ^21.0.0
+  checksum: 29fb9b6b13f8dd5c9b042b65dd212849fa20aba06dc885903dcdea24c89ead67c5e862f94dd96213c9babc417c469175c4c0061daeb942b75dbef6e3a8d84623
+  languageName: node
+  linkType: hard
+
+"effector-logger@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "effector-logger@npm:0.10.0"
+  dependencies:
+    "@babel/helper-module-imports": ^7.12.13
+    "@babel/traverse": ^7.13.0
+    detect-node: 2.0.4
+    effector-inspector: ^0.4.1
+    just-debounce-it: ^1.1.0
+    set-value: 3.0.1
+  peerDependencies:
+    effector: ^21.8.0
+  checksum: 8deab7a07ae6b09a2d8ae5cffdb87684e99a5396a64711285fe9375df27c693f3ea4f4393243806d46b0f0d06c98c2f4ccc7fe8085d5de202af8b5ee1c0dd3a2
   languageName: node
   linkType: hard
 
@@ -5770,6 +5805,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"foliage@npm:^0.106.0":
+  version: 0.106.0
+  resolution: "foliage@npm:0.106.0"
+  dependencies:
+    stylis: ^4.0.0
+  peerDependencies:
+    effector: ^21.8.3
+    forest: ^0.19.6
+  checksum: 8dcd6add1327da53c7359edeca27530c7ad8381a2c099862303400660e59e30487ca2f2e69ce19fa6f1aa895c3bbb586af0fecbfc47770a222645097644ae32f
+  languageName: node
+  linkType: hard
+
 "follow-redirects@npm:^1.0.0":
   version: 1.14.0
   resolution: "follow-redirects@npm:1.14.0"
@@ -5807,6 +5854,7 @@ __metadata:
     concurrently: ^5.3.0
     cross-env: ^7.0.3
     effector: latest
+    effector-logger: ^0.10.0
     express: ^4.17.1
     forest: latest
     history: ^5.0.0
@@ -5820,7 +5868,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"forest@npm:latest":
+"forest@npm:^0.19.6, forest@npm:latest":
   version: 0.19.6
   resolution: "forest@npm:0.19.6"
   peerDependencies:
@@ -8071,6 +8119,13 @@ fsevents@^1.2.7:
     json-schema: 0.2.3
     verror: 1.10.0
   checksum: ee0177b7ef39e6becf18c586d31fabe15d62be88e7867d3aff86466e4a3de9a2cd47b6e597417aebc1cd3c2d43bc662e79ab5eecdadf3ce0643e909432ed6d2c
+  languageName: node
+  linkType: hard
+
+"just-debounce-it@npm:^1.1.0":
+  version: 1.5.0
+  resolution: "just-debounce-it@npm:1.5.0"
+  checksum: 081430f525646d7ca118bf4e832428accc671c785bc671850b687aaf00a896e65f53bddbb3a7a90f961a33c0c4fe3b990ca5d5d98cd4f5d240b1dde53e6a5c2b
   languageName: node
   linkType: hard
 
@@ -11302,6 +11357,15 @@ resolve@1.17.0:
   languageName: node
   linkType: hard
 
+"set-value@npm:3.0.1":
+  version: 3.0.1
+  resolution: "set-value@npm:3.0.1"
+  dependencies:
+    is-plain-object: ^2.0.4
+  checksum: 7ee975bf59652d2bc0d6b16d7069a3eca51e7761b4c647a81e4dbaebb1a030927c3b1fa631e4ebd97691c0956a404d444bff0c0f0be24eac24b1edf88336992a
+  languageName: node
+  linkType: hard
+
 "set-value@npm:^2.0.0, set-value@npm:^2.0.1":
   version: 2.0.1
   resolution: "set-value@npm:2.0.1"
@@ -12041,6 +12105,13 @@ resolve@1.17.0:
     postcss: ^7.0.0
     postcss-selector-parser: ^3.0.0
   checksum: 1345ad348db3c98f7d0423762e13e816a8c1ba0b1d90d79f3528513be429f1cf68b7fa9c9d379870208586e7ff4cfb68b4121bbd904df03b17e84d62efcff288
+  languageName: node
+  linkType: hard
+
+"stylis@npm:^4.0.0":
+  version: 4.0.10
+  resolution: "stylis@npm:4.0.10"
+  checksum: 271892d9f64eced85ed777879e303ef58154f3dec60de7ca962d91c4b6ec0961d278050221a196eee050c58ce34e6e06f293537dc2eb4c0d83fc40b168767750
   languageName: node
   linkType: hard
 

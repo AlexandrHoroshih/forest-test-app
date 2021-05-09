@@ -53,6 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["concurrently", "npm:5.3.0"],
             ["cross-env", "npm:7.0.3"],
             ["effector", "npm:21.8.11"],
+            ["effector-logger", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.10.0"],
             ["express", "npm:4.17.1"],
             ["forest", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.19.6"],
             ["history", "npm:5.0.0"],
@@ -6925,6 +6926,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["detect-node", [
+        ["npm:2.0.4", {
+          "packageLocation": "./.yarn/cache/detect-node-npm-2.0.4-1d5a93916d-e7648a5a91.zip/node_modules/detect-node/",
+          "packageDependencies": [
+            ["detect-node", "npm:2.0.4"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.0.5", {
           "packageLocation": "./.yarn/cache/detect-node-npm-2.0.5-128b35fd02-115f615555.zip/node_modules/detect-node/",
           "packageDependencies": [
@@ -7184,6 +7192,58 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/effector-npm-21.8.11-5d4c2eada7-c45effed27.zip/node_modules/effector/",
           "packageDependencies": [
             ["effector", "npm:21.8.11"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["effector-inspector", [
+        ["npm:0.4.2", {
+          "packageLocation": "./.yarn/cache/effector-inspector-npm-0.4.2-c0a19bfffe-29fb9b6b13.zip/node_modules/effector-inspector/",
+          "packageDependencies": [
+            ["effector-inspector", "npm:0.4.2"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:fa6533b801f035e16dd26f3c047f6e7f78e2fd88c59cb6250f98f512d2df93693e5c8a01920aa6204bf6bd7df7b2b9deabb174ccf2e2d36bc3b6381e7386fd24#npm:0.4.2", {
+          "packageLocation": "./.yarn/$$virtual/effector-inspector-virtual-bb0f647292/0/cache/effector-inspector-npm-0.4.2-c0a19bfffe-29fb9b6b13.zip/node_modules/effector-inspector/",
+          "packageDependencies": [
+            ["effector-inspector", "virtual:fa6533b801f035e16dd26f3c047f6e7f78e2fd88c59cb6250f98f512d2df93693e5c8a01920aa6204bf6bd7df7b2b9deabb174ccf2e2d36bc3b6381e7386fd24#npm:0.4.2"],
+            ["@types/effector", null],
+            ["effector", "npm:21.8.11"],
+            ["foliage", "virtual:bb0f64729285f40d576e5a18b14a4f4a66eb3c539f1a942f0b05c4ba920eff7f551652bdfe221a7414492fb52d07f3f5273b4d66b4c2e91bd6f4d417f4535e78#npm:0.106.0"],
+            ["forest", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.19.6"]
+          ],
+          "packagePeers": [
+            "@types/effector",
+            "effector"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["effector-logger", [
+        ["npm:0.10.0", {
+          "packageLocation": "./.yarn/cache/effector-logger-npm-0.10.0-9b1114dfff-8deab7a07a.zip/node_modules/effector-logger/",
+          "packageDependencies": [
+            ["effector-logger", "npm:0.10.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.10.0", {
+          "packageLocation": "./.yarn/$$virtual/effector-logger-virtual-fa6533b801/0/cache/effector-logger-npm-0.10.0-9b1114dfff-8deab7a07a.zip/node_modules/effector-logger/",
+          "packageDependencies": [
+            ["effector-logger", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.10.0"],
+            ["@babel/helper-module-imports", "npm:7.13.12"],
+            ["@babel/traverse", "npm:7.14.0"],
+            ["@types/effector", null],
+            ["detect-node", "npm:2.0.4"],
+            ["effector", "npm:21.8.11"],
+            ["effector-inspector", "virtual:fa6533b801f035e16dd26f3c047f6e7f78e2fd88c59cb6250f98f512d2df93693e5c8a01920aa6204bf6bd7df7b2b9deabb174ccf2e2d36bc3b6381e7386fd24#npm:0.4.2"],
+            ["just-debounce-it", "npm:1.5.0"],
+            ["set-value", "npm:3.0.1"]
+          ],
+          "packagePeers": [
+            "@types/effector",
+            "effector"
           ],
           "linkType": "HARD",
         }]
@@ -7979,6 +8039,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["foliage", [
+        ["npm:0.106.0", {
+          "packageLocation": "./.yarn/cache/foliage-npm-0.106.0-6019f2e46c-8dcd6add13.zip/node_modules/foliage/",
+          "packageDependencies": [
+            ["foliage", "npm:0.106.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:bb0f64729285f40d576e5a18b14a4f4a66eb3c539f1a942f0b05c4ba920eff7f551652bdfe221a7414492fb52d07f3f5273b4d66b4c2e91bd6f4d417f4535e78#npm:0.106.0", {
+          "packageLocation": "./.yarn/$$virtual/foliage-virtual-ecc69c34af/0/cache/foliage-npm-0.106.0-6019f2e46c-8dcd6add13.zip/node_modules/foliage/",
+          "packageDependencies": [
+            ["foliage", "virtual:bb0f64729285f40d576e5a18b14a4f4a66eb3c539f1a942f0b05c4ba920eff7f551652bdfe221a7414492fb52d07f3f5273b4d66b4c2e91bd6f4d417f4535e78#npm:0.106.0"],
+            ["@types/effector", null],
+            ["@types/forest", null],
+            ["effector", "npm:21.8.11"],
+            ["forest", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.19.6"],
+            ["stylis", "npm:4.0.10"]
+          ],
+          "packagePeers": [
+            "@types/effector",
+            "@types/forest",
+            "effector",
+            "forest"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["follow-redirects", [
         ["npm:1.14.0", {
           "packageLocation": "./.yarn/cache/follow-redirects-npm-1.14.0-e2eedd8a6d-70c86697f2.zip/node_modules/follow-redirects/",
@@ -8051,6 +8138,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["concurrently", "npm:5.3.0"],
             ["cross-env", "npm:7.0.3"],
             ["effector", "npm:21.8.11"],
+            ["effector-logger", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.10.0"],
             ["express", "npm:4.17.1"],
             ["forest", "virtual:e19ee1d62d468a1d971340001dcfc5eb825f7612623142d2d6bf887882b63c328730ef02f0bb05cd432fe0c0740dee9f5e99d912268c26e8f40e2973f34ae2ca#npm:0.19.6"],
             ["history", "npm:5.0.0"],
@@ -10562,6 +10650,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["extsprintf", "npm:1.3.0"],
             ["json-schema", "npm:0.2.3"],
             ["verror", "npm:1.10.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["just-debounce-it", [
+        ["npm:1.5.0", {
+          "packageLocation": "./.yarn/cache/just-debounce-it-npm-1.5.0-aff6bb3ee3-081430f525.zip/node_modules/just-debounce-it/",
+          "packageDependencies": [
+            ["just-debounce-it", "npm:1.5.0"]
           ],
           "linkType": "HARD",
         }]
@@ -14289,6 +14386,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["split-string", "npm:3.1.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/set-value-npm-3.0.1-9ee0cdf28a-7ee975bf59.zip/node_modules/set-value/",
+          "packageDependencies": [
+            ["set-value", "npm:3.0.1"],
+            ["is-plain-object", "npm:2.0.4"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["setimmediate", [
@@ -15099,6 +15204,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["browserslist", "npm:4.16.6"],
             ["postcss", "npm:7.0.35"],
             ["postcss-selector-parser", "npm:3.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["stylis", [
+        ["npm:4.0.10", {
+          "packageLocation": "./.yarn/cache/stylis-npm-4.0.10-4c0fa47ff8-271892d9f6.zip/node_modules/stylis/",
+          "packageDependencies": [
+            ["stylis", "npm:4.0.10"]
           ],
           "linkType": "HARD",
         }]
