@@ -43,12 +43,14 @@ export const renderApp = async (
   // for test we will hardcode initial entry
   const history = createMemoryHistory({ initialEntries: ["/about"] });
   const scope = fork(root);
-  launch(attachHistory, {
-    //@ts-expect-error
+  launch({
+    target: attachHistory,
     params: history,
+    // @ts-expect-error
     forkPage: scope,
   });
   const markup = await renderStatic({ scope, fn: App });
+  const scopeData = serialize(scope, { onlyChanges: true });
 
   if (context.url) {
     return { redirect: context.url };
@@ -68,7 +70,7 @@ export const renderApp = async (
         ${markup}
         ${jsScriptTagsFromAssets(assets, 'client', ' defer crossorigin')}
         <script>
-          window.SCOPE_DATA = ${JSON.stringify(serialize(scope))}
+          window.SCOPE_DATA = ${JSON.stringify(scopeData)}
         </script>
     </body>
   </html>`;

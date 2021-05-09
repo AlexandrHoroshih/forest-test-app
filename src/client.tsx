@@ -15,9 +15,10 @@ hydrate(root, { values });
 
 const scope = fork(root);
 
-launch(attachHistory, {
-  // @ts-expect-error
+launch({
+  target: attachHistory,
   params: history,
+  // @ts-expect-error
   forkPage: scope,
 });
 

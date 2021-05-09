@@ -1,4 +1,13 @@
 {
-    "presets": ["razzle/babel"],
-    "plugins": ["effector/babel-plugin"]
+    "presets": [
+        "razzle/babel"
+    ],
+    "plugins": [
+        [
+          "effector/babel-plugin",
+          {
+            "factories": ["src/pages/history-bind"]
+          }
+        ]
+      ]
 }
