@@ -12,7 +12,7 @@ export const attachHistory = root.createEvent<History>();
 export const historyUpdated = root.createEvent<HistoryUpdate>();
 
 export const $location = root
-  .createStore<Location | { pathname: "" }>({ pathname: "" })
+  .createStore<Location | { pathname: "/" }>({ pathname: "/" })
   .on(historyUpdated, (_, update) => update.location);
 
 const clocks = createHistoryClocks(root);

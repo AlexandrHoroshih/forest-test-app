@@ -8,6 +8,7 @@
   "scripts": {
     "start:tsc": "tsc -b -w --preserveWatchOutput",
     "start": "concurrently \"yarn start:tsc\" \"razzle start\"",
+    "start:log": "LOGGER=true concurrently \"yarn start:tsc\" \"razzle start\"",
     "build": "tsc -b && razzle build",
     "test": "razzle test --env=jsdom",
     "start:prod": "NODE_ENV=production node build/server.js"
@@ -35,6 +36,7 @@
     "@types/react-dom": "^16.9.6",
     "@types/react-router-dom": "^5.1.4",
     "@types/webpack-env": "^1.15.2",
+    "babel-plugin-transform-rename-import": "^2.3.0",
     "babel-preset-razzle": "4.0.4",
     "clean-css": "^5.1.2",
     "concurrently": "^5.3.0",

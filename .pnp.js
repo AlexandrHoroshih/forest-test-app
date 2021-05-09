@@ -53,6 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:16.9.12"],
             ["@types/react-router-dom", "npm:5.1.7"],
             ["@types/webpack-env", "npm:1.16.0"],
+            ["babel-plugin-transform-rename-import", "npm:2.3.0"],
             ["babel-preset-razzle", "npm:4.0.4"],
             ["clean-css", "npm:5.1.2"],
             ["concurrently", "npm:5.3.0"],
@@ -6213,6 +6214,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["babel-plugin-transform-rename-import", [
+        ["npm:2.3.0", {
+          "packageLocation": "./.yarn/cache/babel-plugin-transform-rename-import-npm-2.3.0-172d6f4557-c3a64bf9a2.zip/node_modules/babel-plugin-transform-rename-import/",
+          "packageDependencies": [
+            ["babel-plugin-transform-rename-import", "npm:2.3.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["babel-preset-current-node-syntax", [
         ["npm:1.0.1", {
           "packageLocation": "./.yarn/cache/babel-preset-current-node-syntax-npm-1.0.1-849ec71e32-bba41cc95a.zip/node_modules/babel-preset-current-node-syntax/",
@@ -9514,6 +9524,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:16.9.12"],
             ["@types/react-router-dom", "npm:5.1.7"],
             ["@types/webpack-env", "npm:1.16.0"],
+            ["babel-plugin-transform-rename-import", "npm:2.3.0"],
             ["babel-preset-razzle", "npm:4.0.4"],
             ["clean-css", "npm:5.1.2"],
             ["concurrently", "npm:5.3.0"],

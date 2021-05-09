@@ -3188,6 +3188,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-transform-rename-import@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "babel-plugin-transform-rename-import@npm:2.3.0"
+  checksum: c3a64bf9a2597b5d34911a667c5e9028e84deec8113294275773ede64668f3c44ce74d6dce1d18325e23e3544abff93a2389a7fb44631bd5402cf6ea5b787625
+  languageName: node
+  linkType: hard
+
 "babel-preset-current-node-syntax@npm:^1.0.0":
   version: 1.0.1
   resolution: "babel-preset-current-node-syntax@npm:1.0.1"
@@ -5984,6 +5991,7 @@ __metadata:
     "@types/react-dom": ^16.9.6
     "@types/react-router-dom": ^5.1.4
     "@types/webpack-env": ^1.15.2
+    babel-plugin-transform-rename-import: ^2.3.0
     babel-preset-razzle: 4.0.4
     clean-css: ^5.1.2
     concurrently: ^5.3.0
