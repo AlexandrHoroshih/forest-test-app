@@ -25,6 +25,7 @@ const checkHistory = <S extends State>(
 
   if (!historyProvided) {
     console.warn("No history was provided");
+    return false;
   }
 
   return historyProvided;
@@ -108,6 +109,7 @@ export const wrapHistory = <S extends State = State>(config: Config<S>) => {
   const historyBack = sample({
     source: historySource,
     clock: clocks.back,
+    fn: (history) => history,
   });
 
   historyBack.watch((history) => checkHistory(history) && history.back());
@@ -116,6 +118,7 @@ export const wrapHistory = <S extends State = State>(config: Config<S>) => {
   const historyForward = sample({
     source: historySource,
     clock: clocks.forward,
+    fn: (history) => history,
   });
 
   historyForward.watch((history) => checkHistory(history) && history.forward());

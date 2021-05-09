@@ -1,6 +1,7 @@
 {
     "presets": [
-        "razzle/babel"
+        "razzle/babel",
+        "@linaria"
     ],
     "plugins": [
         [

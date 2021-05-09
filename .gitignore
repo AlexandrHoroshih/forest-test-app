@@ -117,3 +117,4 @@ public/static
 .env.test.local
 .env.production.local
 cache
+.linaria-cache
