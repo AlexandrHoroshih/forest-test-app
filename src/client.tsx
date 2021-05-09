@@ -1,6 +1,6 @@
 import { using } from "forest";
 import { createBrowserHistory } from "history";
-import { fork, hydrate, launch } from "effector";
+import { fork, hydrate, allSettled } from "effector";
 import { App } from "./app";
 
 import { attachHistory } from "pages/history-bind";
@@ -15,18 +15,17 @@ hydrate(root, { values });
 
 const scope = fork(root);
 
-launch({
-  target: attachHistory,
-  params: history,
-  // @ts-expect-error
-  forkPage: scope,
-});
+const initClient = async () => {
+  await allSettled(attachHistory, { scope, params: history });
 
-using(document.body, {
-  fn: App,
-  hydrate: true,
-  scope,
-});
+  using(document.body, {
+    fn: App,
+    hydrate: true,
+    scope,
+  });
+};
+
+initClient().catch(console.error);
 
 if (module.hot) {
   module.hot.accept();
