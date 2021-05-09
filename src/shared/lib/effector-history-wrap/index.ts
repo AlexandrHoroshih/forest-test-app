@@ -1,12 +1,12 @@
 import type { History, Location, Action, To, State } from "history";
-import type { Store, Event, Domain } from "effector";
+import type { Event, Domain, Store } from "effector";
 import { scopeBind, sample, createEvent } from "effector";
 
 export type ToParams<S extends State = State> = { to: To; state?: S };
 export type HistoryUpdate = { action: Action; location: Location };
 
 type Config<S extends State = State> = {
-  historySource: Event<History<S>> | Store<History<S>>;
+  historySource: Event<History<S> | null> | Store<History<S> | null>;
   clocks?: {
     push?: Event<ToParams<S>>;
     replace?: Event<ToParams<S>>;
@@ -30,14 +30,22 @@ const checkHistory = <S extends State>(
 };
 
 export const createHistoryClocks = (domain?: Domain) => {
-  const create = domain ? domain.createEvent : createEvent;
+  if (domain) {
+    return {
+      push: domain.createEvent<ToParams>(),
+      replace: domain.createEvent<ToParams>(),
+      go: domain.createEvent<number>(),
+      back: domain.createEvent<unknown>(),
+      forward: domain.createEvent<unknown>(),
+    };
+  }
 
   return {
-    push: create<ToParams>(),
-    replace: create<ToParams>(),
-    go: create<number>(),
-    back: create<unknown>(),
-    forward: create<unknown>(),
+    push: createEvent<ToParams>(),
+    replace: createEvent<ToParams>(),
+    go: createEvent<number>(),
+    back: createEvent<unknown>(),
+    forward: createEvent<unknown>(),
   };
 };
 
@@ -45,10 +53,11 @@ export const wrapHistory = <S extends State = State>(config: Config<S>) => {
   const { historySource, clocks, target } = config;
 
   historySource.watch((history) => {
-    if (!checkHistory<S>(history)) return;
-
     const listener = scopeBind(target);
 
+    if (!checkHistory<S>(history)) return;
+
+    listener({ location: history.location, action: history.action });
     history.listen(listener);
   });
 
