@@ -12,6 +12,7 @@ export const MainPage = () => {
       class: myClass,
     },
   });
+  h("button", { text: "I am a button" });
   h("h2", () => {
     spec({
       text: "Based on razzle, works with SSR",

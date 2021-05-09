@@ -3,15 +3,15 @@ import { $location } from "./history-bind";
 import { MainPage } from "pages/main";
 import { AboutPage } from "pages/about";
 
-export const Routes = () =>
+export const Routes = () => {
+  const $pathname = $location.map((l) => l.pathname);
+
   variant({
-    source: $location,
-    key: "pathname",
+    source: $pathname,
+    key: null,
     cases: {
       "/": MainPage,
       "/about": AboutPage,
-      __: () => {
-        h("div", { text: "Not found" });
-      },
     },
   });
+};
