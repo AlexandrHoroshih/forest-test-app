@@ -73,11 +73,7 @@ export const wrapHistory = <S extends State = State>(config: Config<S>) => {
   const historyPushed = sample({
     source: historySource,
     clock: clocks.push,
-    fn: (history, params) => {
-      console.log(history);
-
-      return { history, params };
-    },
+    fn: (history, params) => ({ history, params }),
   });
 
   historyPushed.watch(
