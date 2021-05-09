@@ -3,7 +3,7 @@ import { createMemoryHistory } from "history";
 import { fork, serialize, allSettled } from "effector";
 import { renderStatic } from "forest/server";
 
-import { attachHistory, push } from "pages/history-bind";
+import { attachHistory, push, $history } from "pages/history-bind";
 import { root } from "shared/root";
 import { App } from "./app";
 
@@ -45,7 +45,7 @@ export const renderApp = async (
   await allSettled(attachHistory, { scope, params: history });
   await allSettled(push, { scope, params: { to: req.url } });
   const markup = await renderStatic({ scope, fn: App });
-  const scopeData = serialize(scope, { onlyChanges: true });
+  const scopeData = serialize(scope, { onlyChanges: true, ignore: [$history] });
 
   if (context.url) {
     return { redirect: context.url };
