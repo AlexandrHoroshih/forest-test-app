@@ -1,9 +1,11 @@
 import type { History, Location } from "history";
 import type { HistoryUpdate } from "shared/lib/effector-history-wrap";
+import { restore } from "effector";
 import {
   wrapHistory,
   createHistoryClocks,
 } from "shared/lib/effector-history-wrap";
+import { createHistorySpecs } from "shared/lib/effector-history-wrap/forest";
 import { root } from "shared/root";
 
 export const attachHistory = root.createEvent<History>();
@@ -17,8 +19,12 @@ const clocks = createHistoryClocks(root);
 
 export const { push, replace, go, back, forward } = clocks;
 
+export const $history = restore(attachHistory, null);
+
 wrapHistory({
-  historySource: attachHistory,
+  historySource: $history,
   clocks,
   target: historyUpdated,
 });
+
+export const { withPush } = createHistorySpecs(clocks);
